@@ -1,10 +1,9 @@
 FROM node:10
 
 ENV NODE_ENV=production
-ENV DEBUG=*
-WORKDIR /usr/src/EtherScamDB
+WORKDIR /usr/src/CryptoScamDB
 
-RUN git clone https://github.com/CryptoScamDB/cryptoscamdb.org.git /usr/src/EtherScamDB
+RUN git clone https://github.com/CryptoScamDB/cryptoscamdb.org.git /usr/src/CryptoScamDB
 RUN npm install --only=production
 COPY . .
 EXPOSE 80
